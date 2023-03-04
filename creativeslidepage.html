@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+
+        }
+
+        body {
+            height: 100vh;
+        }
+
+        .side {
+            height: 100vh;
+            width: 100%;
+            display: grid;
+            place-items: center;
+            overflow: hidden;
+            position: absolute;
+        }
+
+        .side .title {
+            color: white;
+            font-family: "Rubik", sans-serif;
+            font-size: 8vw;
+            margin: 0px 15vw;
+            width: 70vw;
+        }
+
+        .side .fancy {
+            font-family: "Lobster", cursive;
+            font-size: 1.3em;
+            line-height: 0.8em;
+        }
+
+        #leftside {
+            background-color: rgb(142, 13, 185);
+            z-index: 2;
+
+        }
+
+        #leftside .title {
+            color: white;
+        }
+
+        #leftside .fancy {
+            color: rgb(221, 168, 22);
+        }
+
+        #rightside .title {
+            color: rgb(0, 0, 0);
+        }
+
+        #rightside .fancy {
+            color: white;
+        }
+
+        #rightside {
+            background-color: rgb(221, 168, 22);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="leftside" class="side">
+        <h2 class="title">
+            Today is going to be <span class="fancy">awsome</span>
+        </h2>
+    </div>
+    <div id="rightside" class="side">
+        <h2 class="title">
+            Today is going to be <span class="fancy">wonderful</span>
+        </h2>
+    </div>
+
+
+</body>
+<script>
+    console.log('hey')
+    const left = document.getElementById("leftside")
+
+    const hadleonmove = e => {
+        const p =e.clientX /window.innerWidth* 100
+
+        left.style.width = `${p}%`;
+    }
+
+    document.onmousemove = e => hadleonmove(e);
+    document.ontouchmove = e => hadleonmove(e.touches[0]);
+ 
+     
+</script>
+
+</html>

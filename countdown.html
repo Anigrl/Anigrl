@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTDOWN</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            background: url("back2.jpg");
+            background-size: cover;
+            height: 100vh;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        h2{
+            font-weight: normal;
+            font-size: 2rem;
+        }
+        .countdown-container{
+            display: flex;
+            gap: 2rem;
+            padding-top: 2rem;
+            text-align: center;
+            
+        }
+         .bigtext{
+            
+            font-weight: bold;
+            font-size: 3.5rem;
+        } 
+         
+    </style>
+</head>
+
+<body>
+
+    <h2>Until New Beginings</h2>
+    <div class="countdown-container">
+        <div class="textmain" ><p id="days" class="bigtext">0</p><span>days</span></div>
+        <div class="textmain" ><p id="hours" class="bigtext">0</p><span>hours</span></div>
+        <div class="textmain" ><p id="minutes"class="bigtext">0</p><span>minutes</span></div>
+        <div class="textmain" ><p id="seconds"class="bigtext">0</p><span>seconds</span></div>
+    </div>
+</body>
+<script src="countdown.js"></script>
+
+</html>
